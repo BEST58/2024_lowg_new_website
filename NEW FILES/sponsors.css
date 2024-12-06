@@ -1,0 +1,344 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    background: radial-gradient(circle at bottom, #0a0b1a, #000);
+    color: #e5e5e7;
+    transition: background-color 0.5s ease;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers all text */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack the content vertically */
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+
+/* Header Section - Outer Space with a Starry Background */
+header {
+    background: url('space-background.jpg') no-repeat center center/cover;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    overflow: visible;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Navbar "Eagle Robotics" Text Styling */
+.navbar h1 {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    margin: 0;
+    z-index: 2;
+}
+
+.navbar h1 a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+}
+
+.navbar h1:hover {
+    color: #f5f5f7;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Navbar Links */
+.navbar nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #1d1d1f;
+    border: 2px solid #f5f5f7;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.navbar nav a:hover {
+    background-color: #1d1d1f;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Styling for sponsor images */
+.sponsor-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.sponsor-img {
+    max-width: 150px; /* Set a max width for the images */
+    margin: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sponsor-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer Section - Ensure it's at the bottom */
+footer {
+    background-color: black;
+    padding: 1rem 0;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+}
+
+/* Logo Styling */
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    height: 80px; /* Increase the height of the logo */
+    width: auto;
+    margin-right: -12rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a0b1a;
+    padding: 20px;
+    text-align: center;
+    color: #e5e5e7;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #e5e5e7;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f5f5f7;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.copyright {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        height: 60vh; /* Reduce height for smaller screens */
+        padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar .logo {
+        height: 60px; /* Adjust logo size for mobile */
+        margin-right: auto;
+    }
+
+    .navbar h1 {
+        font-size: 1rem; /* Reduce font size for mobile */
+        margin-left: 60px;
+    }
+
+    .navbar nav {
+        display: flex;
+        justify-content: space-between; /* Distribute space between items */
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+        margin-top: 20px;
+    }
+
+    .navbar nav a {
+        margin: 0.1rem; /* Further reduce margin for better fit */
+        font-size: 0.65rem; /* Make font size much smaller */
+        padding: 0.2rem 0.4rem; /* Reduce padding to make buttons smaller */
+        min-width: 45px; /* Reduce minimum width for consistency */
+        flex-shrink: 1; /* Allow buttons to shrink */
+        text-align: center; /* Center text in buttons */
+    }
+
+    /* Hero Section */
+    .hero-content {
+        margin-top: 120px; /* Add margin to push content down below navbar */
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem; /* Reduce heading size for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Learn More Button */
+    .learn-more-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .footer-content {
+        margin-top: 80px; /* Add margin to push footer content down */
+    }
+
+    /* Best Robotics */
+    .best-robotics h1 {
+        font-size: 28px;
+    }
+
+    .hover-text {
+        font-size: 16px;
+    }
+
+    /* Social Links */
+    .social-links a {
+        font-size: 0.8rem; /* Smaller font size for social links */
+        margin: 0 5px; /* Reduced margin for better fit */
+    }
+
+    .social-links p {
+        font-size: 0.8rem; /* Smaller text for social links */
+    }
+
+    .copyright {
+        font-size: 0.7rem; /* Smaller font size for copyright */
+    }
+}
+
+/* Very small screens (phones) */
+@media screen and (max-width: 480px) {
+    
+    /* Header */
+    header {
+        height: 25vh; /* Further reduce header height on very small screens */
+    }
+
+    /* Navbar */
+    .navbar .logo {
+        height: 60px; /* Even smaller logo on very small screens */
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    .navbar h1 {
+        font-size: 2rem; /* Reduce font size even more */
+        margin-top: -60px;
+    }
+
+    .navbar nav a {
+        font-size: 0.6rem; /* Make font size even smaller for very small screens */
+        padding: 0.2rem 0.3rem; /* Adjust padding to match the new size */
+        min-width: 40px; /* Further reduce minimum width */
+    }
+
+    /* Hero Section */
+    .hero-content h2 {
+        font-size: 1.6rem; /* Adjust hero section heading for very small screens */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    /* Learn More Button */
+    .learn-more-btn {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.8rem;
+    }
+}

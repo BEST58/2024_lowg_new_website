@@ -1,0 +1,484 @@
+/* General Styles for Space Theme */
+body {
+    font-family: 'Futura', Arial, sans-serif;
+    font-weight: 400;
+    background: radial-gradient(circle at bottom, #0a0b1a, #000);
+    color: #e5e5e7;
+    transition: background-color 0.5s ease;
+    scroll-behavior: smooth;
+}
+
+/* Header Section - Outer Space with a Starry Background */
+header {
+    background: url('space-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    overflow: visible;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Logo Styling */
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    height: 80px; /* Increase the height of the logo */
+    width: auto;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+
+/* Navbar "Eagle Robotics" Text Styling */
+.navbar h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    animation: slideInLeft 1s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    margin: 0;
+    z-index: 2;
+}
+
+.navbar h1 a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+}
+
+.navbar h1:hover {
+    color: #f5f5f7;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.navbar h1::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    transition: width 0.5s ease-in-out;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.navbar h1:hover::before {
+    width: 120%;
+}
+
+/* Navbar Links */
+.navbar nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #1d1d1f;
+    border: 2px solid #f5f5f7;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.navbar nav a:hover {
+    background-color: #1d1d1f;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+.navbar nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar nav a:hover::before {
+    opacity: 0.5;
+}
+
+.navbar nav a:active {
+    transform: scale(0.98);
+}
+
+/* Hero Section */
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #e5e5e7;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.hero-content p {
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c2c2d6;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    padding: 1rem 3rem;
+    background-color: #1d1d1f;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-5px);
+    background: radial-gradient(circle, #353535, #1d1d1f);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+.learn-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.learn-more-btn:hover::before {
+    opacity: 0.5;
+}
+
+.learn-more-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a0b1a;
+    color: #c2c2d6;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #c2c2d6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f5f5f7;
+    text-decoration: underline;
+}
+
+.best-robotics h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.hover-text {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease, color 0.3s ease;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hover-text:hover {
+    transform: translateY(-5px);
+    letter-spacing: 1px;
+    color: #0077cc; /* A subtle color change for elegance */
+}
+
+.best-robotics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a0b1a;
+    padding: 20px;
+    text-align: center;
+    color: #e5e5e7;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #e5e5e7;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f5f5f7;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.copyright {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        height: 60vh; /* Reduce height for smaller screens */
+        padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar .logo {
+        height: 60px; /* Adjust logo size for mobile */
+    }
+
+    .navbar h1 {
+        font-size: 1rem; /* Reduce font size for mobile */
+    }
+
+    .navbar nav {
+        display: flex;
+        justify-content: space-between; /* Distribute space between items */
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+        margin-top: 20px;
+    }
+
+    .navbar nav a {
+        margin: 0.1rem; /* Further reduce margin for better fit */
+        font-size: 0.65rem; /* Make font size much smaller */
+        padding: 0.2rem 0.4rem; /* Reduce padding to make buttons smaller */
+        min-width: 45px; /* Reduce minimum width for consistency */
+        flex-shrink: 1; /* Allow buttons to shrink */
+        text-align: center; /* Center text in buttons */
+    }
+
+    /* Hero Section */
+    .hero-content {
+        margin-top: 120px; /* Add margin to push content down below navbar */
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem; /* Reduce heading size for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Learn More Button */
+    .learn-more-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .footer-content {
+        margin-top: 80px; /* Add margin to push footer content down */
+    }
+
+    /* Best Robotics */
+    .best-robotics h1 {
+        font-size: 28px;
+    }
+
+    .hover-text {
+        font-size: 16px;
+    }
+
+    /* Social Links */
+    .social-links a {
+        font-size: 0.8rem; /* Smaller font size for social links */
+        margin: 0 5px; /* Reduced margin for better fit */
+    }
+
+    .social-links p {
+        font-size: 0.8rem; /* Smaller text for social links */
+    }
+
+    .copyright {
+        font-size: 0.7rem; /* Smaller font size for copyright */
+    }
+}
+
+/* Very small screens (phones) */
+@media screen and (max-width: 480px) {
+    
+    /* Header */
+    header {
+        height: 90vh; /* Further reduce header height on very small screens */
+    }
+
+    /* Navbar */
+    .navbar .logo {
+        height: 60px; /* Even smaller logo on very small screens */
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem; /* Reduce font size even more */
+        text-align: center;
+        margin-right: 50px;
+    }
+
+    .navbar nav a {
+        font-size: 0.6rem; /* Make font size even smaller for very small screens */
+        padding: 0.2rem 0.4rem; /* Adjust padding to match the new size */
+        min-width: 40px; /* Further reduce minimum width */
+    }
+
+    /* Hero Section */
+    .hero-content h2 {
+        font-size: 1.6rem; /* Adjust hero section heading for very small screens */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    /* Learn More Button */
+    .learn-more-btn {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.8rem;
+    }
+}
